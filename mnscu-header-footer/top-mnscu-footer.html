@@ -1,0 +1,186 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="top-mnscu-footer">
+
+  <link rel="import" type="css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- css-->
+  <style>
+  .mnscufooter {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .panel-body-mnscu-footer{
+    padding: 15px;
+  }
+  .link-no-decoration{
+    text-decoration: none !important;
+  }
+  .twitter-timeline{
+
+  }
+  h4{
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  </style>
+
+  <!--html content -->
+  <template>
+    <div id="navMain_lower"><!-- MAIN NAV (LOWER) -->
+        <div id="navMain_lower_content"><!-- Begin Bottom Nav -->
+            <div class="row">
+                <div class="clearfix visible-sm visible-md visible-lg"></div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><span class="glyphicon glyphicon-search"></span> Start Your Search</h4>
+                        </div>
+
+                        <div class="panel-body-mnscu-footer">
+                            <a href="{{_getCollegeSearchBaseUrl(collegeSearchBaseUrl,'/college-search/public/institution?activeTab=collegeSearch')}}"
+                               class="link-no-decoration"
+                               title="Compare MnSCU's 24 State Community, Technical, and Comprehensive Colleges and 7 State Universities"
+                               aria-label="Compare Compare MnSCU's 24 State Community, Technical, and Comprehensive Colleges and 7 State Universities">Compare Colleges</a><br>
+                            <a href="{{_getCollegeSearchBaseUrl(collegeSearchBaseUrl,'/college-search/public/institution?activeTab=programSearch')}}"
+                               class="link-no-decoration"
+                               title="Find a Program at any of MnSCU's 24 State Community, Technical, and Comprehensive Colleges and 7 State Universities"
+                               aria-label="Find a Program at any of MnSCU's 24 State Community, Technical, and Comprehensive Colleges and 7 State Universities">Find a Program</a><br>
+                            <a href="{{_getMnscuBaseUrl(mnscuBaseUrl, '/addmissions/transfer.html')}}"
+                               class="link-no-decoration" title="Explore Transfer Options"
+                               aria-label="Explore Transfer Options">Explore transfer options</a><br>
+                            <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/requestinfo')}}"
+                               class="link-no-decoration" title="Request Information"
+                               aria-label="Request Information">Request Information</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><span
+                                    class="glyphicon glyphicon-transfer"></span> Career and Military Services</h4>
+                        </div>
+
+                        <div class="panel-body-mnscu-footer"><a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/careers')}}"
+                                                                class="link-no-decoration" title="Career Information"
+                                                                aria-label="Career Information">Career information</a><br>
+                            <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/military/index.html')}}"
+                               class="link-no-decoration" title="Military/Veterans Services"
+                               aria-label="Military/Veterans Services">Military/Veteran Services</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><span class="glyphicon glyphicon-globe"></span> Charting the Future</h4>
+                        </div>
+
+                        <div class="panel-body-mnscu-footer">
+                            <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/chartingthefuture')}}"
+                               class="link-no-decoration" title="Learn more about Charting the Future"
+                               aria-label="Learn more about Charting the Future">About CTF</a><br>
+                            <a href="http://www.chartingthefuturemnscu.com/" target="_blank"
+                               class="link-no-decoration" title="Charting the Future News and Updates"
+                               aria-label="Charting the Future News and Updates">News and updates</a><br>
+                            <a href="http://www.chartingthefuturemnscu.com/gallery-walk/" target="_blank"
+                               class="link-no-decoration" title="Charting the Future Gallery Walk"
+                               aria-label="Charting the Future Gallery Walk">Gallery Walk</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-sm visible-md visible-lg"></div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><span class="glyphicon glyphicon-info-sign"></span> About MnSCU</h4>
+                        </div>
+
+                        <div class="panel-body-mnscu-footer">
+                            <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/directories')}}" class="link-no-decoration"
+                               title="MnSCU Directories" aria-label="MnSCU Directories">Directories</a><br>
+                            <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/jobs')}}" class="link-no-decoration"
+                               title="MnSCU Job Opportunities" aria-label="MnSCU Job Opportunities">Jobs</a><br>
+                            <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/media/newsreleases')}}"
+                               class="link-no-decoration" title="MnSCU Recent New Releases"
+                               aria-label="MnSCU Recent New Releases">News</a><br>
+                            <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/system')}}" class="link-no-decoration"
+                               title="Minnesota State Colleges and Universities System Information"
+                               aria-label="Minnesota State Colleges and Universities System Information">System Information</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><span class="glyphicon glyphicon-briefcase"></span> More resources</h4>
+                        </div>
+
+                        <div class="panel-body-mnscu-footer">
+                            <a href="http://www.advancement.mnscu.edu/resources/publications/pdf/2014-15_MnSCU_viewbook.pdf"
+                               target="_blank" class="link-no-decoration" title="Go To MnSCU Viewbook"
+                               aria-label="Go To MnSCU Viewbook">MnSCU Viewbook</a><br>
+                            <a href="http://www.hr.mnscu.edu/Cabinet_Executive_Se/"
+                               class="link-no-decoration" title="MnSCU Executive Searches"
+                               aria-label="MnSCU Executive Searches">Executive Searches</a><br>
+                            <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/counselors/')}}'"
+                               class="link-no-decoration" title="High School Counselor Forms"
+                               aria-label="High School Counselor Forms">HS Counselor Form</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><span class="glyphicon glyphicon-question-sign"></span> What's new</h4>
+                        </div>
+
+                        <div class="panel-body-mnscu-footer">
+                            <a class="twitter-timeline" data-aria-polite="assertive"
+                               data-chrome="noheader nofooter noscrollbar noborders transparent"
+                               data-link-color="#114477" data-tweet-limit="1" data-widget-id="372017813445017601"
+                               height="200" href="https://twitter.com/mnscu/lists/mnscu-campuses" width="300"
+                               lang="EN">Tweets from @mnscu/mnscu-campuses</a>
+                               <span>{{_getTwitterFeed()}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </template>
+
+  <script>
+
+    Polymer({
+      is: "top-mnscu-footer",
+      properties:{
+        mnscuBaseUrl:String,
+        collegeSearchBaseUrl: String
+      },
+      _getMnscuBaseUrl: function(baseUrl, url){
+        return baseUrl + url;
+      },
+      _getCollegeSearchBaseUrl: function(baseUrl, url){
+        return baseUrl + url;
+      },
+      _getTwitterFeed: function(){!function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+          if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = p + "://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+          }
+      }(document, "script", "twitter-wjs");
+    }
+    });
+  </script>
+
+</dom-module>

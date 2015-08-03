@@ -1,0 +1,29 @@
+{
+  "name": "mnscu-header-footer",
+  "version": "0.0.1",
+  "authors": [
+    "Tony Veigel <tony.veigel@so.mnscu.edu>"
+  ],
+  "description": "MNSCU.edu header and footer",
+  "main": [
+    "mnscu-header.html",
+    "top-mnscu-footer.html",
+    "mnscu-footer.html"
+  ],
+  "keywords": [
+    "mnscu",
+    "header",
+    "footer",
+    "top-footer"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+    }
+}
