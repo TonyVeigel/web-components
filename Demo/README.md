@@ -3,10 +3,10 @@
 ##Installation
 
 Clone the respository 
-
+'''
 Install node
 cmd: brew install node
-
+'''
 Install serve
 cmd: npm install -g serve
 
