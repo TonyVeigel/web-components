@@ -24,6 +24,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "bootstrap": "^3.3.5",
     "polymer": "Polymer/polymer#^1.0.0"
     }
 }
