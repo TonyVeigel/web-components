@@ -1,0 +1,61 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<!-- Our component definition-->
+<dom-module id="google-analytics">
+
+  <!-- css-->
+  <style>
+  </style>
+
+  <!--html content -->
+  <template>
+    <iron-ajax
+    auto
+    url="http://localhost:8080/college-search/analytics/account"
+    params="{{ajaxParams}}"
+    handle-as="json"
+    on-response="handleResponse"
+    on-error="handleError"
+    debounce-duration="300">
+  </iron-ajax>
+
+  <span>{{_buildAnalyticsCode([[ajaxResponse.gaAccount]])}}</span>
+
+  </template>
+
+  <script>
+
+    Polymer({
+      is: "google-analytics",
+      properties:{
+        rcId:String,
+        appId:String,
+        env:String,
+        ajaxParams: {
+          type: String,
+          computed: 'processParams(rcId, appId, env)'
+        }
+      },
+      processParams: function(rcId, appId, env){
+        return {
+          rcId: rcId,
+          appId: appId,
+          env: env
+        };
+      },
+      handleResponse: function(e, request){
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', request.response.gaAccount, 'auto');
+        ga('send', 'pageview');
+      },
+      handleError: function(){
+        console.log("Error retrieving GA account number.")
+      }
+    });
+  </script>
+
+</dom-module>

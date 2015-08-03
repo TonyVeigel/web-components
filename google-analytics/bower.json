@@ -1,0 +1,25 @@
+{
+  "name": "google-analytics",
+  "version": "0.0.1",
+  "authors": [
+    "Tony Veigel <tony.veigel@so.mnscu.edu>"
+  ],
+  "description": "Get GA account number",
+  "main": [
+    "google-analytics.html"
+  ],
+  "keywords": [
+    "google",
+    "analytics"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+    }
+}
