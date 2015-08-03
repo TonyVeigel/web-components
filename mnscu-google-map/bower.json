@@ -1,18 +1,26 @@
 {
-  "name": "polymer-example",
-  "version": "0.0.0",
+  "name": "mnscu-google-map",
+  "version": "0.0.1",
   "authors": [
     "Tony Veigel <tony.veigel@so.mnscu.edu>"
   ],
-  "main": "index.html",
-  "license": "MIT",
+  "description": "Get GA account number",
+  "main": [
+    "mnscu-google-map.html"
+  ],
+  "keywords": [
+    "mnscu",
+    "google",
+    "map"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components"
   ],
+  "license": "MIT",
+  "private": true,
   "dependencies": {
-    "bootstrap": "^3.3.5",
     "polymer": "Polymer/polymer#^1.0.0",
     "iron-ajax": "PolymerElements/iron-ajax#~1.0.3",
     "google-map": "GoogleWebComponents/google-map#~1.0.3"

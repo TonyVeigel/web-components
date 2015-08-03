@@ -1,0 +1,61 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/google-map/google-map.html">
+
+<!-- Our component definition-->
+<dom-module id="mnscu-google-map">
+
+  <!-- css-->
+  <style>
+  google-map {
+    height: 100%;
+    width: 100%;
+  }
+  </style>
+
+  <!--html content -->
+  <template>
+
+    <iron-ajax
+      auto
+      url="http://localhost:8080/college-search/public/services/institution/latitudeLongitude"
+      params="{{ajaxParams}}"
+      handle-as="json"
+      last-response="{{ajaxResponse}}"
+      on-error="handleError"
+      debounce-duration="300">
+    </iron-ajax>
+
+    <google-map fit-to-markers>
+      <template is="dom-repeat" items="{{ajaxResponse}}">
+        <google-map-marker latitude={{item.latitude}} longitude={{item.longitude}}></google-map-marker>
+      </template>
+    </google-map>
+
+  </template>
+
+  <script>
+
+    Polymer({
+      is: "mnscu-google-map",
+      properties:{
+        showAll:Boolean,
+        zoomState:Boolean,
+        campusId:String,
+        ajaxParams: {
+          type: String,
+          computed: 'processParams(campusId)'
+        }
+      },
+      processParams: function(campusId){
+        return {
+          campusId:campusId
+        };
+      },
+      handleError: function(){
+        console.log("Error retrieving latitude and longitude.")
+      }
+    });
+  </script>
+
+</dom-module>

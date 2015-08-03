@@ -14,6 +14,9 @@
 
   <link rel="import" href="components/google-analytics.html">
 
+  <link rel="import" href="components/mnscu-google-map.html">
+
+
 </head>
 
 <body>
@@ -21,6 +24,10 @@
 <google-analytics rc-id="0000" app-id="38" env="DEV"></google-analytics>
 
 <mnscu-header mnscu-base-url="http://www.mnscu.edu" college-search-base-url="https://webproc.mnscu.edu"></mnscu-header>
+
+<div style="height:250px;width:250px;">
+  <mnscu-google-map campus-id="125" show-all="false" zoom-state="false"></mnscu-google-map>
+</div>
 
 <top-mnscu-footer mnscu-base-url="http://www.mnscu.edu" college-search-base-url="https://webproc.mnscu.edu"></top-mnscu-footer>
 
