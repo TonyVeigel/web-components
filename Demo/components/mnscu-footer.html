@@ -1,0 +1,78 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<!-- Our component definition-->
+<dom-module id="mnscu-footer">
+
+  <link rel="import" type="css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- css-->
+  <style>
+  .mnscufooter {
+    text-align: center;
+    margin-top: 20px;
+  }
+  </style>
+
+  <!--html content -->
+  <template>
+    <footer class="row mnscufooter">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <p style="margin-bottom: 15px;">
+          <a href="http://www.mnscu.edu">
+            <img src="{{_getFullFilesUrl(filesBaseUrl, '/global/_files/mnscu/images/footer/mnsculogo.png')}}"
+                alt="Minnesota State Colleges and Universities system logo">
+          </a>
+       </p>
+       <p><a href="{{_getFullLinksUrl(linksBaseUrl,'/system/contact.html')}}" class="link-no-decoration" title="Contact MnSCU" aria-label="Contact MnSCU">Contact Us</a> |
+           <a href="{{_getFullLinksUrl(linksBaseUrl,'/system/directions.html')}}" class="link-no-decoration" title="Directions to MnSCU System Office" arai-label="Directions to MnSCU System Office">Directions</a> |
+           <a href="{{_getFullLinksUrl(linksBaseUrl,'/system/privacy.html')}}" class="link-no-decoration" title="Read our Privacy Statement" aria-label="Read our Privacy Statement">Privacy</a> |
+           <a href="mailto:websupport@so.mnscu.edu" class="link-no-decoration" title="Email us any Website Issues" aria-label="Email us any Website Issues">Website issues</a>
+      </p>
+      <p>Visit us on social media:
+          <a href="http://www.facebook.com/pages/Minnesota-State-Colleges-and-Universities/165040450198525"
+             title="Find us on Facebook" aria-label="Find us on Facebook" target="_blank">
+              <img width="20" height="20"
+                  src="{{_getFullFilesUrl(filesBaseUrl,'/global/_files/mnscu/images/footer/facebook-icon.png')}}"
+                  alt="Find us on Facebook"></a>
+          <a href="http://twitter.com/mnscu" title="Follow us on Twitter" aria-label="Follow us on Twitter" target="_blank">
+              <img width="20" height="20"
+                  src="{{_getFullFilesUrl(filesBaseUrl,'/global/_files/mnscu/images/footer/twitter-icon.png')}}"
+                  alt="Tweet us on Twitter"></a>
+          <a href="http://www.youtube.com/minnstate" title="Follow us on YouTube" aria-label="Follow us on YouTube" target="_blank">
+              <img width="20" height="20"
+                  src="{{_getFullFilesUrl(filesBaseUrl,'/global/_files/mnscu/images/footer/youtube-icon.png')}}"
+                  alt="Watch us on YouTube"></a>
+      </p>
+      <p>Minnesota State Colleges and Universities<br>
+          30 7th St. E., Suite 350, St. Paul, MN 55101-7804<br>
+          Toll free: (800) 456-8519 | International: +1-651-5560596<br>
+          Consumers with hearing or speech disabilities may contact us via their preferred Telecommunications Relay Service.
+      </p>
+        <span>{{_getFullYear()}}</span> Minnesota State Colleges and Universities
+      </div>
+        <div class="col-md-2"></div>
+    </footer>
+  </template>
+
+  <script>
+
+    Polymer({
+      is: "mnscu-footer",
+      properties:{
+        linksBaseUrl:String,
+        filesBaseUrl:String
+      },
+      _getFullFilesUrl: function(baseUrl, url){
+        return baseUrl + url;
+      },
+      _getFullLinksUrl: function(baseUrl, url){
+        return baseUrl + url;
+      },
+      _getFullYear: function(){
+        return new Date().getFullYear();
+      }
+    });
+  </script>
+
+</dom-module>

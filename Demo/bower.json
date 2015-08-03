@@ -1,0 +1,19 @@
+{
+  "name": "polymer-example",
+  "version": "0.0.0",
+  "authors": [
+    "Tony Veigel <tony.veigel@so.mnscu.edu>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "polymer": "Polymer/polymer#^1.0.0",
+    "iron-ajax": "PolymerElements/iron-ajax#~1.0.3"
+  }
+}

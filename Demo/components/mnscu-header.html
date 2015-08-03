@@ -1,0 +1,129 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<!-- Our component definition-->
+<dom-module id="mnscu-header">
+
+  <link rel="import" type="css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+
+  <!-- css-->
+  <style>
+  .navbar{
+    padding-bottom: 8px;
+  }
+  .navbar-nav{
+    padding-top: 10px;
+  }
+  .navbar-nav li{
+    margin-bottom: -7px;
+  }
+  .navbar-header button {
+    padding-top: 12px;
+    margin-top: 15px;
+  }
+  .navbar-brand {
+    padding-top: 24px;
+  }
+  #searchBox{
+    border-radius: 5px;
+    border: 0 none;
+    font-size: 0.95em;
+    height: 26px;
+    line-height: 2.1em;
+    margin: 11px 0px 6px 10px;
+    padding: 0 0 0 25px;
+    width: 170px;
+  }
+  .input.gsc-search-button {
+      background-image: none;
+  }
+  </style>
+
+  <template>
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" data-target="#navbar-collapse" data-toggle="collapse"
+                                             type="button">
+              <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+              <a class="navbar-brand" href="http://www.mnscu.edu" title="Minnesota State Colleges and Universities"
+                 aria-label="Minnesota State Colleges and Universities">Minnesota State</a></div>
+
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+              <ul class="nav navbar-nav">
+                  <li class="visible-xs visible-sm visible-md visible-lg">
+                      <a href="{{_getCollegeSearchBaseUrl(collegeSearchBaseUrl,'/college-search/public/institution?activeTab=collegeSearch')}}" title="College Search"
+                         aria-label="College Search">College Search</a></li>
+                  <li class="visible-xs hidden-sm visible-md visible-lg">
+                      <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/admissions')}}" title="Admissions Information"
+                         aria-label="Admissions Information">Admissions Information</a></li>
+                  <li class="visible-xs hidden-sm hidden-md visible-lg">
+                      <a href="{{_getCollegeSearchBaseUrl(collegeSearchBaseUrl,'/college-search/public/institution?activeTab=programSearch')}}" title="Academic Programs"
+                         aria-label="Academic Programs">Academic Programs</a></li>
+                  <li class="visible-xs hidden-sm hidden-md visible-lg">
+                      <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/online')}}" title="Online Learning"
+                         aria-label="Online Learning">Online Learning</a></li>
+                  <li class="visible-xs hidden-md hidden-sm visible-lg">
+                      <a href="https://minnesotaonlinesupport.org" title="Go To Minnesota Online Support"
+                         aria-label="Go To Minnesota Online Support" target="_blank">Help</a></li>
+                  <li class="visible-xs visible-sm visible-md visible-lg">
+                      <a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/admissions/application.html')}}" title="Go to Online Application"
+                         aria-label="Go to Online Application" target="_blank">Apply Now</a></li>
+                  <li class="dropdown hidden-xs hidden-lg"><a class="dropdown-toggle" data-toggle="dropdown"
+                                                              href="#">More <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/admissions')}}" title="Admissions Information"
+                                 aria-label="Admissions Information">Admissions Information</a></li>
+                          <li><a href="{{_getCollegeSearchBaseUrl(collegeSearchBaseUrl,'/college-search/public/institution?activeTab=programSearch')}}"
+                                 title="Academic Programs" aria-label="Academic Programs">Academic Programs</a></li>
+                          <li><a href="{{_getMnscuBaseUrl(mnscuBaseUrl,'/online')}}" title="Online Learning"
+                                 aria-label="Online Learning">Online Learning</a>></li>
+                          <li><a href="https://minnesotaonlinesupport.org" title="Go To Minnesota Online Support"
+                                 aria-label="Go To Minnesota Online Support" target="_blank">Help</a></li>
+                      </ul>
+                  </li>
+                  <li class="visible-xs visible-sm visible-md visible-lg">
+
+                      <div id="searchBox">
+                          <gcse:searchbox-only resultsUrl="{{_getMnscuBaseUrl(mnscuBaseUrl,'/studentsearch/results.html')}}"/>
+                      </div>
+
+                      <span>{{_getSearchBox()}}</span>
+                    </li>
+              </ul>
+          </div>
+        </div>
+    </nav>
+  </template>
+
+  <script>
+
+    Polymer({
+      is: "mnscu-header",
+      properties:{
+        mnscuBaseUrl:String,
+        collegeSearchBaseUrl: String
+      },
+      _getMnscuBaseUrl: function(baseUrl, url){
+        return baseUrl + url;
+      },
+      _getCollegeSearchBaseUrl: function(baseUrl, url){
+        return baseUrl + url;
+      },
+      _getSearchBox: function(){
+        (function () {
+            var cx = '007500811716931696017:1grv_31igem';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                    '//www.google.com/cse/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+      }
+    });
+  </script>
+
+</dom-module>
