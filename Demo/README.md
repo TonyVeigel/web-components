@@ -3,6 +3,8 @@
 ##Installation
 
 Clone the respository 
+
+Navagate to directory of installation 
 `cmd: <directory of installation>`
 
 Install node
