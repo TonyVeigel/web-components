@@ -4,7 +4,7 @@
   "authors": [
     "Tony Veigel <tony.veigel@so.mnscu.edu>"
   ],
-  "description": "Get GA account number",
+  "description": "Create google map",
   "main": [
     "mnscu-google-map.html"
   ],
