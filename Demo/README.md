@@ -3,6 +3,7 @@
 ##Installation
 
 Clone the respository 
+`cmd: <directory of installation>`
 
 Install node
 `cmd: brew install node`
@@ -13,10 +14,10 @@ Install serve
 Install bower
 `cmd: npm install -g bower`
 
-Install package
+Install packages
 `cmd: bower install`
 
 Start server
-`cmd: server`
+`cmd: serve`
 
-Navagate to http://localhost:3000/index.html
+In web browser navagate to http://localhost:3000/index.html
