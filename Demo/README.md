@@ -4,8 +4,8 @@
 
 Clone the respository 
 
-Navagate to directory of installation 
-`cmd: <directory of installation>`
+Navagate to directory of where you cloned 
+`cmd: <directory of clone>`
 
 Install node
 `cmd: brew install node`
