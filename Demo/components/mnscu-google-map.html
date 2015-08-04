@@ -26,7 +26,7 @@
       debounce-duration="300">
     </iron-ajax>
 
-    <google-map fit-to-markers>
+    <google-map latitude="46.0000" longitude="94.0000" fit-to-markers>
       <template is="dom-repeat" items="{{ajaxResponse}}">
         <google-map-marker latitude={{item.latitude}} longitude={{item.longitude}}></google-map-marker>
       </template>
@@ -40,8 +40,7 @@
       is: "mnscu-google-map",
       properties:{
         showAll:Boolean,
-        zoomState:Boolean,
-        campusId:String,
+        campusId:Array,
         ajaxParams: {
           type: String,
           computed: 'processParams(campusId)'
