@@ -26,17 +26,19 @@
     Polymer({
       is: "google-analytics",
       properties:{
-        rcId:Array,
+        campusIds:Array,
+        rcIds:Array,
         appId:String,
         env:String,
         ajaxParams: {
           type: String,
-          computed: 'processParams(rcId, appId, env)'
+          computed: 'processParams(campusIds, rcIds, appId, env)'
         }
       },
-      processParams: function(rcId, appId, env){
+      processParams: function(campusIds, rcIds, appId, env){
         return {
-          rcId: rcId,
+          campusIds: campusIds,
+          rcIds: rcIds,
           appId: appId,
           env: env
         };

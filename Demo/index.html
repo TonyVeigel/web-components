@@ -10,30 +10,29 @@
 
   <link rel="import" href="components/top-mnscu-footer.html">
 
-  <link rel="import" href="components/mnscu-footer.html">
-
   <link rel="import" href="components/google-analytics.html">
 
   <link rel="import" href="components/mnscu-google-map.html">
+
+  <link rel="import" href="components/mnscu-footer.html">
 
 
 </head>
 
 <body>
 
-<google-analytics rc-id=["0000"] app-id="38" env="DEV"></google-analytics>
+  <google-analytics rc-ids=["0000"] campus-ids=["275"] app-id="" env=""></google-analytics>
+
 
 <mnscu-header mnscu-base-url="http://www.mnscu.edu" college-search-base-url="https://webproc.mnscu.edu"></mnscu-header>
 
 <div style="height:250px;width:250px;">
-  <mnscu-google-map campus-id="125" show-all="false"></mnscu-google-map>
+  <mnscu-google-map campus-id=["125","153"] show-all="false"></mnscu-google-map>
 </div>
 
 <top-mnscu-footer mnscu-base-url="http://www.mnscu.edu" college-search-base-url="https://webproc.mnscu.edu"></top-mnscu-footer>
 
 <mnscu-footer files-base-url="http://www.mnscu.edu" links-base-url="http://www.mnscu.edu"></mnscu-footer>
-
-
 
 </body>
 
