@@ -4,9 +4,9 @@
   "authors": [
     "Tony Veigel <tony.veigel@so.mnscu.edu>"
   ],
-  "description": "Select prefilled with campuses",
+  "description": "Select prefilled with institutions",
   "main": [
-    "mnscu-campus-select.html"
+    "mnscu-institution-select.html"
   ],
   "keywords": [
     "select",
