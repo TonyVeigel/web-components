@@ -40,15 +40,15 @@
       is: "mnscu-google-map",
       properties:{
         showAll:Boolean,
-        campusId:Array,
+        campusIds:Array,
         ajaxParams: {
           type: String,
-          computed: 'processParams(campusId)'
+          computed: 'processParams(campusIds)'
         }
       },
-      processParams: function(campusId){
+      processParams: function(campusIds){
         return {
-          campusId:campusId
+          campusIds:campusIds
         };
       },
       handleError: function(){

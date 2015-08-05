@@ -18,6 +18,7 @@
       debounce-duration="300">
     </iron-ajax>
 
+    <option value=''>Please select...</option>
     <template is="dom-repeat" items="{{ajaxResponse}}">
       <option value="{{item.campusId}}">{{item.name}}</option>
     </template>
