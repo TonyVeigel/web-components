@@ -18,9 +18,10 @@
       debounce-duration="300">
     </iron-ajax>
 
-    <template is="dom-repeat" items="{{ajaxResponse}}">
-      <option value="{{item.campusId}}">{{item.name}}</option>
-    </template>
+    <option value=''>Please select...</option>
+      <template is="dom-repeat" items="{{ajaxResponse}}">
+        <option value="{{item.rcId}}" selected="{{_selectedValue(item.rcId)}}">{{item.name}}</option>
+      </template>
   </template>
 
   <script>
@@ -28,6 +29,14 @@
     Polymer({
       is: "mnscu-institution-select",
       extends: "select",
+      properties: {
+        selectedValue: String
+      },
+      _selectedValue: function(rcId){
+        if(rcId == this.selectedValue){
+          return 'selected';
+        };
+      },
       handleError: function(e, error){
         console.log(error);
       }
