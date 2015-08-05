@@ -1,0 +1,26 @@
+{
+  "name": "mnscu-campus-select",
+  "version": "0.0.1",
+  "authors": [
+    "Tony Veigel <tony.veigel@so.mnscu.edu>"
+  ],
+  "description": "Select prefilled with campuses",
+  "main": [
+    "mnscu-campus-select.html"
+  ],
+  "keywords": [
+    "select",
+    "campuses"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "iron-ajax": "PolymerElements/iron-ajax#~1.0.3"
+  }
+}

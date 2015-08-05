@@ -16,12 +16,15 @@
 
   <link rel="import" href="components/mnscu-footer.html">
 
+  <link rel="import" href="components/mnscu-campus-select.html">
+
+  <link rel="stylesheet" type="css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
 
 </head>
 
 <body>
 
-  <google-analytics rc-ids=["0000"] campus-ids=["275"] app-id="" env=""></google-analytics>
+  <google-analytics rc-ids=["0000,0070"] campus-ids=["070,075"] app-id="" env=""></google-analytics>
 
 
 <mnscu-header mnscu-base-url="http://www.mnscu.edu" college-search-base-url="https://webproc.mnscu.edu"></mnscu-header>
@@ -29,6 +32,8 @@
 <div style="height:250px;width:250px;">
   <mnscu-google-map campus-id=["125","153"] show-all="false"></mnscu-google-map>
 </div>
+
+<select class="form-control" is="mnscu-campus-select"></select>
 
 <top-mnscu-footer mnscu-base-url="http://www.mnscu.edu" college-search-base-url="https://webproc.mnscu.edu"></top-mnscu-footer>
 

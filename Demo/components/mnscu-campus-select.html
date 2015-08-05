@@ -1,0 +1,37 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<!-- Our component definition-->
+<dom-module id="mnscu-campus-select">
+  <!-- css-->
+  <style>
+  </style>
+
+  <!--html content -->
+  <template>
+    <iron-ajax
+      auto
+      url="http://localhost:8080/college-search/public/services/institution/list"
+      handle-as="json"
+      last-response="{{ajaxResponse}}"
+      on-error="handleError"
+      debounce-duration="300">
+    </iron-ajax>
+
+    <template is="dom-repeat" items="{{ajaxResponse}}">
+      <option value="{{item.campusId}}">{{item.name}}</option>
+    </template>
+  </template>
+
+  <script>
+
+    Polymer({
+      is: "mnscu-campus-select",
+      extends: "select",
+      handleError: function(e, error){
+        console.log(error);
+      }
+    });
+  </script>
+
+</dom-module>
