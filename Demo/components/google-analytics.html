@@ -50,13 +50,13 @@
                 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       },
       handleResponse: function(e, detail){
-          detail.response.forEach(function(account, index){
-            ga('create', account, 'auto', {'name':index , 'allowLinker':true});
-            ga(index + '.send', 'pageview');
-          });
+        detail.response.forEach(function(account, index){
+          ga('create', account, 'auto', {'name':index , 'allowLinker':true});
+          ga(index + '.send', 'pageview');
+        });
       },
-      handleError: function(){
-        console.log("Error retrieving GA account number.")
+      handleError: function(e, error){
+        console.log(error);
       }
     });
   </script>
