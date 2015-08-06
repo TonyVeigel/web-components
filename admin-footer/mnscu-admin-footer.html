@@ -1,0 +1,56 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
+
+<dom-module id="mnscu-admin-footer">
+
+  <link rel="import" type="css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+
+  <style>
+  .admin-footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  </style>
+
+    <template>
+
+      <div class="col-sm-12">
+        <div class="admin-footer">
+          <footer class="">
+            <p class="text-muted text-center">
+              Minnesota State Colleges and Universities is an equal opportunity employer and educator.
+            </p>
+            <div class="text-muted text-center">
+              <a title="About this application" href="#" on-tap="toggle">
+                About this application
+              </a>
+              <iron-collapse id="collapse">
+                Application Name:<span>{{appName}}</span> |
+                Application Version:<span>{{appVersion}}</span> |
+                Built:<span>{{built}}</span> |
+                Build ID:<span>{{buildId}}</span>
+              </iron-collapse>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: "mnscu-admin-footer",
+      properties:{
+        appName: String,
+        appVersion:String,
+        built: String,
+        buildId: String
+      },
+      toggle: function(e) {
+        e.preventDefault();
+        this.$.collapse.toggle();
+      }
+    });
+  </script>
+
+</dom-module>

@@ -1,0 +1,28 @@
+{
+  "name": "mnscu-admin-footer",
+  "version": "0.0.1",
+  "authors": [
+    "Tony Veigel <tony.veigel@so.mnscu.edu>"
+  ],
+  "description": "MNSCU.edu admin footer",
+  "main": [
+    "mnscu-admin-footer.html"
+  ],
+  "keywords": [
+    "mnscu",
+    "admin",
+    "footer"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "polymer": "Polymer/polymer#^1.0.0",
+    "iron-collapse": "PolymerElements/iron-collapse#~1.0.2"
+    }
+}
