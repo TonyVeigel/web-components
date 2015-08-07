@@ -1,10 +1,10 @@
 #Documentation
 
-mnscu-admin-footer inserts footer for employee apps
+mnscu-admin-header inserts header for employee apps
 
 ##Example:
 ```
-  <admin-header logout="/logout"></admin-header>
+  <mnscu-admin-header logout="/logout"></mnscu-admin-header>
 ```
 
 ##Style
