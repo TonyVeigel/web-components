@@ -1,12 +1,12 @@
 {
-  "name": "admin-header",
+  "name": "mnscu-admin-header",
   "version": "0.0.1",
   "authors": [
     "Tony Veigel <tony.veigel@so.mnscu.edu>"
   ],
   "description": "Admin header",
   "main": [
-    "admin-header.html"
+    "mnscu-admin-header.html"
   ],
   "keywords": [
     "admin",
