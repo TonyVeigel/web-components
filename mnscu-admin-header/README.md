@@ -1,29 +1,34 @@
 #Documentation
 
-mnscu-admin-footer inserts footer for employee apps
+mnscu-admin-header inserts header for employee apps
 
 ##Example:
 ```
-<mnscu-admin-footer app-name="test" app-version="11" build-id="12" built="today"></mnscu-admin-footer>
+  <mnscu-admin-header logout="/logout"></mnscu-admin-header>
 ```
 
 ##Style
 
 ```
-.admin-footer {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+  #globalNav {
+    margin-bottom: 0;
+    border-radius: 0 0 0 0;
+  }
+  .navbar-inverse{
+        background-color: #222;
+  }
 ```
 
 ##Properties
-**appName**: Name of app
+**profile**: Url to profile
 
-**appVersion**: Version of app
+**employeeHome**: Url to employee home
 
-**buildId**: Build id of app
+**reports**: Url to reports page
 
-**built**: Date app was built
+**contactUs**: Url to contact us page
+
+**logout**: Url to logout
 
 ##Methods
 

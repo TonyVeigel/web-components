@@ -1,12 +1,12 @@
 {
-  "name": "google-analytics",
+  "name": "mnscu-google-analytics",
   "version": "0.0.1",
   "authors": [
     "Tony Veigel <tony.veigel@so.mnscu.edu>"
   ],
   "description": "Get GA account number",
   "main": [
-    "google-analytics.html"
+    "mnscu-google-analytics.html"
   ],
   "keywords": [
     "google",
