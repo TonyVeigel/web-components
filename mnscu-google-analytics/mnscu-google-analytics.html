@@ -51,8 +51,9 @@
       },
       handleResponse: function(e, detail){
         detail.response.forEach(function(account, index){
-          ga('create', account, 'auto', {'name':index , 'allowLinker':true});
-          ga(index + '.send', 'pageview');
+          var name = 'account' + index;
+          ga('create', account, 'auto', {'name':name , 'allowLinker':true});
+          ga(name + '.send', 'pageview');
         });
       },
       handleError: function(e, error){
