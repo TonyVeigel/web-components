@@ -20,15 +20,20 @@ mnscu-admin-header inserts header for employee apps
 ```
 
 ##Properties
-**profile**: Url to profile
+**profile**: Url to profile  
+*default value*:```https://webappdev.mnscu.edu/employeehome/secure/manageprofile.html```
 
-**employeeHome**: Url to employee home
+**employeeHome**: Url to employee home  
+*default value*:```https://webappdev.mnscu.edu/employeehome/secure/userapps.html```
 
-**reports**: Url to reports page
+**reports**: Url to reports page  
+*default value*:```https://webappdev.mnscu.edu/isrsweb/auth/isrsrpt```
 
-**contactUs**: Url to contact us page
+**contactUs**: Url to contact us page  
+*default value*:```https://itsmnscu.custhelp.com/app/ask```
 
-**logout**: Url to logout
+**logout**: Url to logout  
+*default value*: ''
 
 ##Methods
 
