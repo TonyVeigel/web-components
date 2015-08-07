@@ -1,0 +1,26 @@
+{
+  "name": "admin-header",
+  "version": "0.0.1",
+  "authors": [
+    "Tony Veigel <tony.veigel@so.mnscu.edu>"
+  ],
+  "description": "Admin header",
+  "main": [
+    "admin-header.html"
+  ],
+  "keywords": [
+    "admin",
+    "header"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "polymer": "Polymer/polymer#^1.0.0"
+    }
+}
